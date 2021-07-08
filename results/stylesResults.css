@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    width: 100vw;
+    margin: 0px;
+}
+.navbar {
+    display: flex;
+    width: 100vw;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+}
