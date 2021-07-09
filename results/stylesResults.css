@@ -3,6 +3,11 @@
     src: url(fonts/GermaniaOne-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'alien';
+    src: url(fonts/Alienscows-Bold-Trial.ttf);
+}
+
 .container {
     display: flex;
     width: 100vw;
@@ -29,10 +34,6 @@
     top: 0;
 }
 
-.nav li{
-    font-family: 'Digital-7 Mono', arial;
-}
-
 .nav .nav-item1 :hover {
     font-family: 'monospace';
 }
@@ -52,8 +53,6 @@
     color: black;
 }
 
-
-
 .nav-link:before {
     content: "";
     display: block;
@@ -71,4 +70,33 @@
 
 .nav-link:before {
     transform: scale(1);
+}
+
+.artist-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 30px;
+    transition: transform .4s ease;
+}
+
+.artist-container:hover {
+    transform: scale(1.1);
+}
+
+.artist-picture {
+    width: 190px;
+}
+
+.card {
+    width: 1000px;
+    padding: 10px;
+}
+
+.artist-text {
+    font-family: 'germania';
+}
+
+.artist-info {
+    font-family: 'alien';
 }
