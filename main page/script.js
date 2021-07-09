@@ -7,6 +7,15 @@ const body = document.querySelector('body')
 body.addEventListener('submit', function(e) {
     e.preventDefault()
     // console.log('test')
-    const input = search.value
-    // console.log(input)
+    const searchString = search.value
+    const urlEncodedSearchString = encodeURIComponent(searchString)
+    // console.log(`http://musicbrainz.org/ws/2/artist/?query=artist:${urlEncodedSearchString}`)
+    fetch (`http://musicbrainz.org/ws/2/artist/?query=artist:${urlEncodedSearchString}`)
+    .then((res) => {
+        return res.json()
+    })
+    .then((data) => {
+        const artistName = data
+        console.log(artistName)
+    })
 })
