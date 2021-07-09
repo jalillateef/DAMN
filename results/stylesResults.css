@@ -29,10 +29,6 @@
     top: 0;
 }
 
-.nav li{
-    font-family: 'Digital-7 Mono', arial;
-}
-
 .nav .nav-item1 :hover {
     font-family: 'monospace';
 }
