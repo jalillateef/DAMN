@@ -1,15 +1,29 @@
+@font-face {
+    font-family: 'germania';
+    src: url(fonts/GermaniaOne-Regular.ttf);
+}
+
 .container {
     display: flex;
     width: 100vw;
     margin: 0px;
 }
+
 .navbar {
     display: flex;
     width: 100vw;
     margin: 0px;
 }
 
-body {
-    display: flex;
-    width: 100vw;
+.navbar-brand {
+    font-family: 'germania';
+    font-size: 40px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
 }
