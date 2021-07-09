@@ -1,13 +1,36 @@
+@font-face {
+    font-family: 'germania';
+    src: url(fonts/GermaniaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'alien';
+    src: url(fonts/Alienscows-Bold-Trial.ttf);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .heading {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+h1 {
+    font-family: 'germania';
+    text-shadow: 7px 5px red;
+}
+
 .subheading{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'alien';
+    font-size: large;
 }
 
 body{
@@ -15,4 +38,23 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+#search-form {
+    width: 60%;
+}
+
+.btn {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    height: 100%;
+}
+
+.input-group {
+    height: 41px;
 }
