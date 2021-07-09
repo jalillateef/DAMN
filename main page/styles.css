@@ -59,3 +59,9 @@ body{
 .input-group {
     height: 41px;
 }
+
+.nav-link {
+    display: flex;
+    width: 100vw;
+    margin: 0px;
+}
