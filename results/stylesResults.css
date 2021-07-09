@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: 'germania';
+    src: url(fonts/GermaniaOne-Regular.ttf);
+}
 
 .container {
     display: flex;
@@ -6,9 +9,24 @@
     margin: 0px;
 }
 
+.navbar {
+    display: flex;
+    width: 100vw;
+    margin: 0px;
+}
+
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
 .navbar-brand {
     font-family: 'germania';
     text-shadow: 7px 5px red;
+    font-size: 40px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .nav li{
