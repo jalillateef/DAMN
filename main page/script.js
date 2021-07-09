@@ -10,6 +10,7 @@ body.addEventListener('submit', function(e) {
     window.open("../results/searchResult.html")
     // console.log('test')
     const searchString = search.value
+    export {searchString}
     const urlEncodedSearchString = encodeURIComponent(searchString)
     // console.log(`http://musicbrainz.org/ws/2/artist/?query=artist:${urlEncodedSearchString}`)
     fetch (`http://musicbrainz.org/ws/2/artist/?fmt=json&query=artist:${urlEncodedSearchString}`)
