@@ -69,11 +69,13 @@
 
 .artist-picture {
     width: 190px;
+    border: 2px solid black;
 }
 
 .card {
     width: 1000px;
     padding: 10px;
+    border: 2px solid black;
 }
 
 .artist-text {
