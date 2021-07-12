@@ -74,8 +74,8 @@
 
 .artist-picture {
     width: 190px;
-    border: 2px solid black;
-    box-shadow: 12px 20px 10px rgb(0 0 0 / 0.2);
+    margin: 0 15px 0;
+    padding: 0;
 }
 
 .card {
@@ -91,6 +91,28 @@
 
 .artist-info {
     font-family: 'alien';
+}
+
+.content {
+    display: flex;
+    margin: 20px ;
+    align-items: center;
+}
+
+.img-thumbnail {
+    width: 400px;
+    box-shadow: 12px 20px 10px rgb(0 0 0 / 0.2);
+}
+
+.header1 {
+    margin: 30px;
+    display: block;
+    font-family: 'germania';
+    font-size: 60px;
+}
+
+.header2 {
+    margin: 45px;
 }
 
 .artist-life { 
