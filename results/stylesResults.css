@@ -115,3 +115,8 @@
 .header2 {
     margin: 45px;
 }
+.artist-life { 
+    display: flex;
+    justify-content:space-between;
+    width: 15%;
+}
