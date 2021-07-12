@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", function(){    
-    let artistsInfoJSON = localStorage.getItem("artistsInfo")
-    let artistsInfo = JSON.parse(artistsInfoJSON)
-    console.log(artistsInfo)
-    const container = document.querySelector(".all-artist")
-    artistsInfo.map((data) => {
-        container.innerHTML = data.map((artist) => {
-            const artistID = artist.id
-            console.log(artistID)
-            return `<div class='artist-container'>
+
+let artistsInfoJSON = localStorage.getItem("artistsInfo")
+let artistsInfo = JSON.parse(artistsInfoJSON)
+// console.log(artistsInfo)
+const container = document.querySelector(".all-artist")
+artistsInfo.map((data) => {
+    container.innerHTML = data.map((artist) => {
+        const artistID = artist.id
+        // console.log(artistID)
+        return `<div class='artist-container'>
                         <div class='artist-picture me-3'>
                         <img src="pictures/damn-placeholder.png" alt="..." class="img-thumbnail">
                     </div>
@@ -18,6 +18,5 @@ document.addEventListener("DOMContentLoaded", function(){
                     </div>
                 </div>
             </div>`
-        }).join("")
-    })
+    }).join("")
 })
