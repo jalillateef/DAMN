@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log(artistsInfo)
     const container = document.querySelector(".all-artist")
     artistsInfo.map((data) => {
-
         container.innerHTML = data.map((artist) => {
             const artistID = artist.id
             console.log(artistID)

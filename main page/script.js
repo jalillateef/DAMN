@@ -19,13 +19,8 @@ body.addEventListener('submit', function(e) {
         artistsInfo.push(allArtist)
         const artistsInfoJSON = JSON.stringify(artistsInfo)
         localStorage.setItem("artistsInfo", artistsInfoJSON)
-        // ! this was the original mapping of the data, removed and moved to scriptSearch.js because it would be more convinient to hold all data in the sessions storage
-        // allArtist.map((artist) => {
-        //     const artistID = artist.id
-        //     artistIDS.push(artistID)
-        //     artistIDSJSON = JSON.stringify(artistIDS)
-        //     localStorage.setItem("artistIDS", artistIDSJSON)
-        // })
     })
-    window.location.href = ("../results/searchResult.html")
+    .then(() => {
+        window.location.href = ("../results/searchResult.html")
+    })
 })
