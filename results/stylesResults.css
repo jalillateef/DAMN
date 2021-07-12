@@ -15,8 +15,11 @@
 
 .navbar {
     font-family: 'germania';
-    width: 100vw;
     margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 25px;
 }
 
 .navbar-brand {
@@ -48,6 +51,13 @@
     color:black;
     transform: scale(1.5);
     transition: 0.20s linear;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .artist-container {
