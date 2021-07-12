@@ -85,6 +85,12 @@
     box-shadow: 12px 20px 10px rgb(0 0 0 / 0.2);
 }
 
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 .artist-text {
     font-family: 'germania';
 }
@@ -119,4 +125,8 @@
     display: flex;
     justify-content:space-between;
     width: 15%;
+}
+
+.header6 {
+    font-family: 'germania';
 }
