@@ -18,10 +18,12 @@ container.innerHTML = artistsInfo.map((artist) => {
                         <div class="card-body">
                             <h1 class='artist-text'>${artist.name}</h1>
                             <div class='artist-life'>
-                            ${artist['life-span'].begin ?`<h6>${artist['life-span'].begin}</h6>` :""}
-                            ${artist['begin-area'] ?`<h6>${artist['begin-area']['sort-name']}</h6>` :""}
+                            ${artist['life-span'].begin ?`<h6 class="header6">${artist['life-span'].begin}</h6>` :""}
+                            ${artist['begin-area'] ?`<h6 class="header6">${artist['begin-area']['sort-name']}</h6>` :""}
                             </div>
-                            <p class='artist-info'>Information</p>
+                            <div class='button'>
+                                <button type="button" class="btn btn-outline-danger">Favorites</button>
+                            </div>
                         </div>
                     </div>
                 </div>`
