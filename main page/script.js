@@ -27,5 +27,5 @@ body.addEventListener('submit', function(e) {
         //     localStorage.setItem("artistIDS", artistIDSJSON)
         // })
     })
-    // window.location.href = ("../results/searchResult.html")
+    window.location.href = ("../results/searchResult.html")
 })
