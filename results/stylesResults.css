@@ -92,3 +92,9 @@
 .artist-info {
     font-family: 'alien';
 }
+
+.artist-life { 
+    display: flex;
+    justify-content:space-between;
+    width: 15%;
+}

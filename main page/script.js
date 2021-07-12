@@ -14,10 +14,8 @@ body.addEventListener('submit', function(e) {
     .then((data) => {
         const allArtist = data.artists
         console.log(allArtist)    
-        const artistsInfo = []
-        localStorage.clear(artistsInfo);
-        artistsInfo.push(allArtist)
-        const artistsInfoJSON = JSON.stringify(artistsInfo)
+        localStorage.removeItem('artistsInfo');
+        const artistsInfoJSON = JSON.stringify(allArtist)
         localStorage.setItem("artistsInfo", artistsInfoJSON)
     })
     .then(() => {
