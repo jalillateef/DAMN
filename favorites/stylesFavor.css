@@ -12,60 +12,28 @@ h1 {
 	height: 90vh;
 	margin: 2rem;
 	display: grid;
+	justify-items: center;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
-	grid-gap: 25px;
+	grid-gap: 20px;
 }
 
-.cell {
-	color:black;
-	font-size: 3rem;
-	text-align: center;
-	padding: 4rem;
-	}
-  .cell-1 {
-	border-style: groove;
-	border-color: black;
-  }
-  .cell-2 {
-	border-style: groove;
-	border-color: black;
-  }
-  .cell-3 {
-	border-style: groove;
-	border-color: black;
-  }
-  .cell-4 {
-	border-style: groove;
-	border-color: black;
-  }
-  .cell-5 {
-	border-style: groove;
-	border-color: black;
-  }
-  .cell-6 {
-	border-style: groove;
-	border-color: black;
-  }
-  .cell-7 {
-	border-style: groove;
-	border-color: black;
-  }
-  .cell-8 {
-	border-style: groove;
-	border-color: black;
-  }
-  .cell-9 {
-	border-style: groove;
-	border-color: black;
-  }
+.card-body{
+	display: flex;
+	justify-content: center;
+	font-family: 'germania';
 
-  .grid-container{
-	  display: flex;
-	  justify-content: center;
-	  
-  }
+}
 
-  .cell:hover {
+.wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+.card:hover {
     transform: scale(1.1);
+}
+
+.card-body{
+	font-size: x-large;
 }
