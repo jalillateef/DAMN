@@ -28,7 +28,7 @@ artistsInfo.forEach((artist) => {
             } 
             container.innerHTML += `<div class='artist-container'>
                             <div class='artist-picture me-3'>
-                                <img src="${data['thumb_url']}" alt="..." class="img-thumbnail">
+                                <img src="${data['image_url']}" alt="..." class="img-thumbnail">
                             </div>
                             <div class="card">
                                 <div class="card-body">
