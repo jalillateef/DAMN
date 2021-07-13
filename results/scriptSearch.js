@@ -33,13 +33,21 @@ container.innerHTML = artistsInfo.map((artist) => {
                             ${artist['begin-area'] ?`<h6 class="header6">${artist['begin-area']['sort-name']}</h6>` :""}
                             </div>
                             <div class='button'>
-                                <button type="button" class="favorites-button btn btn-outline-danger">Favorites</button>
-                                ${artist.id ? `
-                                <a href='../artist/artist.html?artist=${artist.id}' class="moreinfo-button btn btn-outline-danger">More Info</a>
-                                `: ''}
+                                <button type="button" id="favbtn" class="favorites-button btn btn-outline-danger">Add To Favorites</button>
+                                <button type="button" class="moreinfo-button btn btn-outline-danger">More Info</button>                            
                             </div>
                         </div>
                     </div>
-                </div>`
-}).join("")
+                    </div>`
+                }).join("")
+                
+document.addEventListener("click", (e) => {
+    if(e.target.classList.contains("favorites-button")){
+        if(e.target.innerHTML == "Add To Favorites") {
+            e.target.innerHTML="Added";
+        }else {
+            e.target.innerHTML = "Add To Favorites";
+        }
 
+    }
+})              
