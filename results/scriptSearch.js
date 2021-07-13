@@ -32,12 +32,11 @@ container.innerHTML = artistsInfo.map((artist) => {
                             ${artist['begin-area'] ?`<h6 class="header6">${artist['begin-area']['sort-name']}</h6>` :""}
                             </div>
                             <div class='button'>
-                                <button type="button" class="btn btn-outline-danger">Favorites</button>
+                                <button type="button" class="favorites-button btn btn-outline-danger">Favorites</button>
+                                <button type="button" class="moreinfo-button btn btn-outline-danger">More Info</button>
+                                
                             </div>
                         </div>
                     </div>
                 </div>`
 }).join("")
-
-
-
