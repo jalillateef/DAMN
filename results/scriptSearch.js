@@ -6,6 +6,7 @@ const container = document.querySelector(".all-artist")
 
 artistNameArray = []
 container.innerHTML = artistsInfo.map((artist) => {
+    console.log(artist)
     const artistName = artist.name
     artistNameArray.push(artistName)
     const artistNameJSON = JSON.stringify(artistNameArray)
@@ -33,10 +34,12 @@ container.innerHTML = artistsInfo.map((artist) => {
                             </div>
                             <div class='button'>
                                 <button type="button" class="favorites-button btn btn-outline-danger">Favorites</button>
-                                <button type="button" class="moreinfo-button btn btn-outline-danger">More Info</button>
-                                
+                                ${artist.id ? `
+                                <a href='../artist/artist.html?artist=${artist.id}' class="moreinfo-button btn btn-outline-danger">More Info</a>
+                                `: ''}
                             </div>
                         </div>
                     </div>
                 </div>`
 }).join("")
+
