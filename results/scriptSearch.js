@@ -48,3 +48,14 @@ artistsInfo.forEach((artist) => {
         })
     // ! this is an inline IF statement, it'll check if (left of the question mark) exist, to the right of the question mark its a true and false, if the statement return true, it'll do the true part (between the semicolon and question mark), if false it'll do false part (after the semicolon)
 })
+
+document.addEventListener("click", (e) => {
+    if(e.target.classList.contains("favorites-button")){
+        if(e.target.innerHTML == "Add To Favorites") {
+            e.target.innerHTML="Added";
+        }else {
+            e.target.innerHTML = "Add To Favorites";
+        }
+
+    }
+})   
