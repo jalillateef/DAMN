@@ -1,7 +1,6 @@
 console.log('anything')
 const container = document.getElementById('artistContent')
 
-
     const query=new URLSearchParams(window.location.search)
     const artistID = (query.get('artist'))
     const urlEncodedSearchString = encodeURIComponent(artistID)
