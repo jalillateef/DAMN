@@ -1,7 +1,6 @@
 
 let artistsInfoJSON = localStorage.getItem("artistsInfo")
 let artistsInfo = JSON.parse(artistsInfoJSON)
-// console.log(artistsInfo)
 const container = document.querySelector(".all-artist")
 
 artistNameArray = []
@@ -14,7 +13,6 @@ artistsInfo.forEach((artist) => {
     const urlEncodedArtistName = encodeURIComponent(artistName)
     fetch (`https://rest.bandsintown.com/artists/${urlEncodedArtistName}?app_id=0c3d7989425512a2b6dea2004f6cdd51`)
         .then((res) => {
-
             return res.json()
         }) 
         .then((data) => {
@@ -27,7 +25,11 @@ artistsInfo.forEach((artist) => {
             } 
             container.innerHTML += `<div class='artist-container'>
                             <div class='artist-picture me-3'>
-                                <img src="${data['thumb_url']}" alt="..." class="img-thumbnail">
+                                ${data.image_url !== 'https://photos.bandsintown.com/artistLarge.jpg' ? `
+                                <img src="${data['image_url']}" alt="record.gif" class="img-thumbnail">
+                                ` : `
+                                <img src="./pictures/record.gif" alt="record.gif" class="img-thumbnail">
+                                `}
                             </div>
                             <div class="card">
                                 <div class="card-body">
