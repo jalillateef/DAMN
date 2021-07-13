@@ -25,7 +25,11 @@ artistsInfo.forEach((artist) => {
             } 
             container.innerHTML += `<div class='artist-container'>
                             <div class='artist-picture me-3'>
-                                <img src="${data['image_url']}" alt="..." class="img-thumbnail">
+                                ${data.image_url !== 'https://photos.bandsintown.com/artistLarge.jpg' ? `
+                                <img src="${data['image_url']}" alt="record.gif" class="img-thumbnail">
+                                ` : `
+                                <img src="./pictures/record.gif" alt="record.gif" class="img-thumbnail">
+                                `}
                             </div>
                             <div class="card">
                                 <div class="card-body">
