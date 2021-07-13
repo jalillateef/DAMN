@@ -10,6 +10,15 @@ container.innerHTML = artistsInfo.map((artist) => {
     artistNameArray.push(artistName)
     const artistNameJSON = JSON.stringify(artistNameArray)
     localStorage.setItem('artistName', artistNameJSON)
+    const urlEncodedArtistName = encodeURIComponent(artistName)
+    // console.log(urlEncodedArtistName)
+    fetch (`https://rest.bandsintown.com/artists/${urlEcodedArtistName}?app_id=0c3d7989425512a2b6dea2004f6cdd51`)
+        .then((res) => {
+            return res.json()
+        }) 
+        .then((data) => {
+            console.log(data)
+        })
     // ! this is an inline IF statement, it'll check if (left of the question mark) exist, to the right of the question mark its a true and false, if the statement return true, it'll do the true part (between the semicolon and question mark), if false it'll do false part (after the semicolon)
     return `<div class='artist-container'>
                     <div class='artist-picture me-3'>
