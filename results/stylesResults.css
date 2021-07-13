@@ -13,6 +13,10 @@
     margin: 0px;
 }
 
+.all-artist{
+    max-width: 900;
+}
+
 .navbar {
     font-family: 'germania';
     margin: 0px;
