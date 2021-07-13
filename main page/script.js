@@ -13,7 +13,7 @@ body.addEventListener('submit', function(e) {
     })
     .then((data) => {
         const allArtist = data.artists
-        console.log(allArtist)    
+        // console.log(allArtist)    
         localStorage.removeItem('artistsInfo');
         const artistsInfoJSON = JSON.stringify(allArtist)
         localStorage.setItem("artistsInfo", artistsInfoJSON)
