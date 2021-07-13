@@ -95,6 +95,10 @@
     justify-content: flex-end;
 }
 
+.btn {
+    margin-right: 10px;
+}
+
 .artist-text {
     font-family: 'germania';
 }

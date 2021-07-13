@@ -6,6 +6,7 @@ const container = document.querySelector(".all-artist")
 
 artistNameArray = []
 container.innerHTML = artistsInfo.map((artist) => {
+    // console.log(artist)
     const artistName = artist.name
     artistNameArray.push(artistName)
     const artistNameJSON = JSON.stringify(artistNameArray)
@@ -17,7 +18,7 @@ container.innerHTML = artistsInfo.map((artist) => {
             return res.json()
         }) 
         .then((data) => {
-            console.log(data)
+            // console.log(data)
         })
     // ! this is an inline IF statement, it'll check if (left of the question mark) exist, to the right of the question mark its a true and false, if the statement return true, it'll do the true part (between the semicolon and question mark), if false it'll do false part (after the semicolon)
     return `<div class='artist-container'>
@@ -33,8 +34,7 @@ container.innerHTML = artistsInfo.map((artist) => {
                             </div>
                             <div class='button'>
                                 <button type="button" id="favbtn" class="favorites-button btn btn-outline-danger">Add To Favorites</button>
-                                <button type="button" class="moreinfo-button btn btn-outline-danger">More Info</button>
-                                
+                                <button type="button" class="moreinfo-button btn btn-outline-danger">More Info</button>                            
                             </div>
                         </div>
                     </div>
@@ -51,10 +51,3 @@ document.addEventListener("click", (e) => {
 
     }
 })              
-// document.getElementById("favbtn").addEventListener("click", (e) => {
-//     if(e.target.classList.contains("btn")) {
-//         e.target.innerHTML="Added";
-//     }else {
-//         e.target.innerHTML = "Add To Favorites";
-//     }
-// })
