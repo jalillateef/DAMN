@@ -1,11 +1,9 @@
 
 let artistsInfoJSON = localStorage.getItem("artistsInfo")
 let artistsInfo = JSON.parse(artistsInfoJSON)
-// console.log(artistsInfo)
 const container = document.querySelector(".all-artist")
 
 artistNameArray = []
-
 artistsInfo.forEach((artist) => {
     // console.log(artist)
     const artistName = artist.name
@@ -15,7 +13,6 @@ artistsInfo.forEach((artist) => {
     const urlEncodedArtistName = encodeURIComponent(artistName)
     fetch (`https://rest.bandsintown.com/artists/${urlEncodedArtistName}?app_id=0c3d7989425512a2b6dea2004f6cdd51`)
         .then((res) => {
-
             return res.json()
         }) 
         .then((data) => {
