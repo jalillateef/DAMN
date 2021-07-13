@@ -12,7 +12,7 @@ container.innerHTML = artistsInfo.map((artist) => {
     localStorage.setItem('artistName', artistNameJSON)
     const urlEncodedArtistName = encodeURIComponent(artistName)
     // console.log(urlEncodedArtistName)
-    fetch (`https://rest.bandsintown.com/artists/${urlEcodedArtistName}?app_id=0c3d7989425512a2b6dea2004f6cdd51`)
+    fetch (`https://rest.bandsintown.com/artists/${urlEncodedArtistName}?app_id=0c3d7989425512a2b6dea2004f6cdd51`)
         .then((res) => {
             return res.json()
         }) 
