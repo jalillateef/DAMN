@@ -24,12 +24,12 @@ artistsInfo.forEach((artist) => {
                 return 
             } 
             const beginLife = artist['life-span'].begin
-            // console.log(calendar)
+            console.log(beginLife)
             let birthday = new Date(beginLife)
             const year = birthday.getFullYear()
             const day = birthday.getDay()
             const month = birthday.getMonth()
-            // console.log(month, day, year)
+            console.log(month, day, year)
 
             container.innerHTML += `<div class='artist-container'>
                             <div class='artist-picture me-3'>
