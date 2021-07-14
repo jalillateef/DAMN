@@ -137,5 +137,5 @@ pointer-events: none
 
 .mainContainer {
     display: flex;
-    /* width: 10%; */
+    width: 35%;
 }
