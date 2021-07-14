@@ -125,11 +125,15 @@ pointer-events: none
 }
 
 .carousel-item img {
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
+    width: 90%;
 }
 
 .d-block {
     margin-bottom: 30px;
 }
 
-
+.mainContainer {
+    display: flex;
+    /* width: 10%; */
+}

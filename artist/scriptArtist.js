@@ -17,12 +17,12 @@ const container = document.getElementById('artistContent')
         })
         .then((bitdata) => {
             console.log(mbdata)
-            console.log(bitdata)
-            console.log(container)
+            // console.log(bitdata)
+            // console.log(container)
             container.innerHTML =
                 ( `<img src="${bitdata.image_url}" alt="..." class="img-thumbnail">
                 <h1 class='header1'><b>Artist Name:</b> ${mbdata.name} </h1>
-                <h1 class='header1'><b>Artist Hometown:</b> ${mbdata['begin_area'].name} </h1>
+                <h1 class='header1'><b>Artist Hometown:</b> ${mbdata['begin-area'].name} </h1>
                 <h1 class='header1'><b>Artist Birth:</b> ${mbdata['life-span'].begin} </h1>
                 <h1 class='header1'><b>Artist Genre:</b> Genre Here </h1>
                 <h2 class= 'header2'>More general information.</h2>`)

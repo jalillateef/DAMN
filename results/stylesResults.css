@@ -70,6 +70,7 @@
     padding: 20px;
     margin: 30px;
     transition: transform .4s ease;
+    width: 100%;
 }
 
 .artist-container:hover {
@@ -132,9 +133,14 @@
 .artist-life { 
     display: flex;
     justify-content:space-between;
-    width: 15%;
+    width: 15vw;
+    flex-wrap: wrap;
+    
 }
 
 .header6 {
+    display: flex;
     font-family: 'germania';
+    margin: 0px;
+
 }

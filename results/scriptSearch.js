@@ -17,26 +17,36 @@ artistsInfo.forEach((artist) => {
         }) 
         .then((data) => {
             // console.log(data)
-            const artistPic = data['thumb_url']
+            // const artistPic = data['thumb_url']
             // console.log(artistPic)
-            // if empty or error, it stops/returns
+            // ? if empty or error, it stops/returns
             if (data.error) {
                 return 
             } 
+            const beginLife = artist['life-span'].begin
+            // console.log(calendar)
+            let birthday = new Date(beginLife)
+            const year = birthday.getFullYear()
+            const day = birthday.getDay()
+            const month = birthday.getMonth()
+            // console.log(month, day, year)
+
             container.innerHTML += `<div class='artist-container'>
                             <div class='artist-picture me-3'>
                                 ${data.image_url !== 'https://photos.bandsintown.com/artistLarge.jpg' ? `
-                                <img src="${data['image_url']}" alt="record.gif" class="img-thumbnail">
-                                ` : `
-                                <img src="./pictures/record.gif" alt="record.gif" class="img-thumbnail">
-                                `}
+                                <img src="${data['image_url']}" alt="record.gif" class="img-thumbnail">`: 
+                                `<img src="./pictures/record.gif" alt="record.gif" class="img-thumbnail">`}
                             </div>
                             <div class="card">
                                 <div class="card-body">
                                     <h1 class='artist-text'>${artist.name}</h1>
                                     <div class='artist-life'>
-                                    ${artist['life-span'].begin ?`<h6 class="header6">${artist['life-span'].begin}</h6>` :""}
+                                    <div>
+                                    ${artist['life-span'].begin ?`<h6 class="header6">${month}~${day}~${year}</h6>` :""}
+                                    </div>
+                                    <div>
                                     ${artist['begin-area'] ?`<h6 class="header6">${artist['begin-area']['sort-name']}</h6>` :""}
+                                    </div>
                                     </div>
                                     <div class='button'>
                                         <button type="button" class="favorites-button btn btn-outline-danger">Favorites</button>
