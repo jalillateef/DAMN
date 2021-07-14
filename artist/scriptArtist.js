@@ -25,10 +25,18 @@ fetch (`https://musicbrainz.org/ws/2/artist/${artistID}?inc=url-rels+releases+wo
             return res.json()
         })
         .then((adbdata) => {
-            const strBiographyEN = adbdata.artists[0].strBiographyEN
-            console.log(strBiographyEN)
+            const adbArtist = adbdata.artists[0]
+            const strBiographyEN = adbArtist.strBiographyEN
+            const strMood = adbArtist.strMood
+            // if (adbArtist.error, adbBiographyEN.error, strMood.error) {
+            //     return
+            // }
+            // console.log(strBiographyEN)
+            console.log(adbArtist)
+
             events.innerHTML = `<div class="indivudalEvent">
                                     <p>${strBiographyEN}</p>
+                                    <p>Mood: ${strMood}</p>
                                 </div>`
             container.innerHTML =
                 ( `<img src="${bitdata.image_url}" alt="..." class="img-thumbnail">
