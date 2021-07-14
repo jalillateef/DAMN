@@ -39,7 +39,7 @@ h1 {
     
 }
 
-/* body{
+body{
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -80,20 +80,17 @@ h1 {
 
 
 /* slide show */
-
 .banner1{
     height: 100vh;
     width: 100%;
     position: absolute;
     left: 0;    
     top: 0;
-    /* opacity: 100; */
-}
-/* body
+
 {
-	background-color: #000;
+	background-color:white;
 	padding: 2%;
-	color: #ccc;
+	color: black;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1em;
 } */
@@ -125,6 +122,14 @@ pointer-events: none
 .bgimg iframe{
     height: 100%;
     width: 100%;
+}
+
+.carousel-item img {
+    border: 2px solid black;
+}
+
+.d-block {
+    margin-bottom: 30px;
 }
 
 

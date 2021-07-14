@@ -13,6 +13,10 @@
     margin: 0px;
 }
 
+.all-artist{
+    max-width: 900;
+}
+
 .navbar {
     font-family: 'germania';
     margin: 0px;
@@ -85,6 +89,16 @@
     box-shadow: 12px 20px 10px rgb(0 0 0 / 0.2);
 }
 
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
 .artist-text {
     font-family: 'germania';
 }
@@ -119,4 +133,8 @@
     display: flex;
     justify-content:space-between;
     width: 15%;
+}
+
+.header6 {
+    font-family: 'germania';
 }
