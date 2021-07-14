@@ -1,2 +1,125 @@
+@font-face {
+    font-family: 'germania';
+    src: url(fonts/GermaniaOne-Regular.ttf);
+}
 
+@font-face {
+    font-family: 'alien';
+    src: url(fonts/Alienscows-Bold-Trial.ttf);
+}
 
+.container {
+    width: 100vw;
+    margin: 0px;
+}
+
+.all-artist{
+    max-width: 900;
+}
+
+.navbar {
+    font-family: 'germania';
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 25px;
+}
+
+.navbar-brand {
+    font-family: 'germania';
+    text-shadow: 7px 5px red;
+    font-size: 40px;
+}
+
+.nav .nav-item1 :hover {
+    color:black;
+    transform: scale(1.1);
+}
+
+.nav .nav-item3 :hover {
+    color:black;
+    transform: scale(1.1);
+}
+
+.nav .nav-item4 :hover {
+    color:black;
+    transform: scale(1.1);
+}
+
+.nav-link{
+    color:black;
+}
+
+.nav-link:hover{
+    color:black;
+    transform: scale(1.5);
+    transition: 0.20s linear;
+}
+
+.header1 {
+    margin: 30px;
+    display: block;
+    font-family: 'germania';
+    font-size: 60px;
+}
+
+.header2 {
+    margin: 45px;
+}
+
+.artist-life { 
+    display: flex;
+    justify-content:space-between;
+    width: 15vw;
+    flex-wrap: wrap;
+    
+}
+
+.header6 {
+    display: flex;
+    font-family: 'germania';
+}
+
+.eventdisplay {
+    display: flex;
+    font-family: 'germania';
+    justify-content: center;
+}
+
+.eventtime {
+    display: flex;
+    font-family: 'germania';
+    justify-content: center;
+}
+
+.tickets {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    margin: 20px ;
+    align-items: center;
+}
+
+.img-thumbnail {
+    width: 400px;
+    box-shadow: 12px 20px 10px rgb(0 0 0 / 0.2);
+    margin: 20px;
+}
+
+.card {
+    width: 500px;
+    padding: 10px;
+    border: 2px solid black;
+    box-shadow: 12px 20px 10px rgb(0 0 0 / 0.2);
+}
+
+.ticketbutton {
+    background-color: white;
+    font-family: 'alien';
+}
