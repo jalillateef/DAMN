@@ -31,11 +31,14 @@ fetch(`https://musicbrainz.org/ws/2/artist/${artistID}?inc=url-rels+releases+wor
                         const eventhtml = mbedata.map((artistEvent) => {
                             // console.log(artistEvent.title)
                             return (`
-                    <p class= 'eventtime' >${artistEvent.venue.name}</p>
-                    <p class= 'eventtime' >${artistEvent.datetime}</p>
-                    <p class= 'eventtime' >${artistEvent.venue.location}</p>
-                    <div class= 'tickets'>
-                        <a href='${artistEvent.url}'><button class= 'ticketbutton rounded-3'>Tickets Here</button></a>
+                    <div>
+                        <h1 class = 'ticketinfo'>Ticket Info</h1>
+                    </div>
+                        <p class= 'eventtime' >${artistEvent.venue.name}</p>
+                        <p class= 'eventtime' >${artistEvent.datetime}</p>
+                        <p class= 'eventtime' >${artistEvent.venue.location}</p>
+                        <div class= 'tickets'>
+                            <a href='${artistEvent.url}'><button class= 'ticketbutton rounded-3'>Tickets Here</button></a>
                     </div>`)
                         }).join('')
 
