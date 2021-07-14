@@ -152,5 +152,12 @@
 .eventtime {
     display: flex;
     font-family: 'germania';
-    justify-content: end;
+    justify-content: center;
+}
+
+.tickets {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    padding: 0;
 }
