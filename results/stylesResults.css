@@ -141,6 +141,16 @@
 .header6 {
     display: flex;
     font-family: 'germania';
-    margin: 0px;
+}
 
+.eventdisplay {
+    display: flex;
+    font-family: 'germania';
+    justify-content: center;
+}
+
+.eventtime {
+    display: flex;
+    font-family: 'germania';
+    justify-content: end;
 }
