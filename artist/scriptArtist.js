@@ -45,7 +45,7 @@ fetch(`https://musicbrainz.org/ws/2/artist/${artistID}?inc=url-rels+releases+wor
                             })
                             .then ((adb) => {
                                 const adbdata = adb.artists[0]
-                                console.log(adbdata)
+                                // console.log(adbdata)
                                 // Artist html //
                                 container.innerHTML = `<img src="${bitdata.image_url}" alt="..." class="img-thumbnail">
                                 <h1 class='header1'><b>Artist Name:</b> ${mbdata.name} </h1>
