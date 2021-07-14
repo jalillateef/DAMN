@@ -133,9 +133,9 @@
 .artist-life { 
     display: flex;
     justify-content:space-between;
-    width: 20vw;
+    width: 15vw;
     flex-wrap: wrap;
-
+    
 }
 
 .header6 {
