@@ -123,3 +123,15 @@
     background-color: white;
     font-family: 'alien';
 }
+
+.ticketbutton:hover {
+    transform: scale(1.1);
+    transition: 0.20s linear;
+}
+
+.ticketinfo {
+    display: flex;
+    justify-content: center;
+    font-family: 'germania';
+    font-size: small;
+}
