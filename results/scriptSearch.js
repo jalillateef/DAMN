@@ -1,4 +1,3 @@
-
 let artistsInfoJSON = localStorage.getItem("artistsInfo")
 let artistsInfo = JSON.parse(artistsInfoJSON)
 const container = document.querySelector(".all-artist")
@@ -21,7 +20,7 @@ artistsInfo.forEach((artist) => {
             // console.log(artistPic)
             // ? if empty or error, it stops/returns
             if (data.error) {
-                return 
+                return  
             } 
             const beginLife = artist['life-span'].begin
             console.log(beginLife)
@@ -30,7 +29,6 @@ artistsInfo.forEach((artist) => {
             const day = birthday.getDay()
             const month = birthday.getMonth()
             console.log(month, day, year)
-
             container.innerHTML += `<div class='artist-container'>
                             <div class='artist-picture me-3'>
                                 ${data.image_url !== 'https://photos.bandsintown.com/artistLarge.jpg' ? `
@@ -57,10 +55,9 @@ artistsInfo.forEach((artist) => {
                                 </div>
                             </div>
                         </div>`
-        })
     // ! this is an inline IF statement, it'll check if (left of the question mark) exist, to the right of the question mark its a true and false, if the statement return true, it'll do the true part (between the semicolon and question mark), if false it'll do false part (after the semicolon)
+        })
 })
-
 document.addEventListener("click", (e) => {
     if(e.target.classList.contains("favorites-button")){
         if(e.target.innerHTML == "Add To Favorites") {
@@ -68,6 +65,6 @@ document.addEventListener("click", (e) => {
         }else {
             e.target.innerHTML = "Add To Favorites";
         }
-
     }
-})   
+    }
+)   
