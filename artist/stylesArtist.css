@@ -135,3 +135,27 @@
     font-family: 'germania';
     font-size: small;
 }
+
+.biography {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'germania';
+    height: 300px;
+    max-height: 100%;
+}
+
+.artist-bio {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.outline {
+    display: flex;
+    padding: 20px;
+    box-shadow: 12px 20px 10px rgb(0 0 0 / 0.2);
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 25px;
+    align-items: center;
+}
