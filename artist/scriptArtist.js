@@ -1,5 +1,6 @@
-console.log('anything')
+// console.log('anything')
 const container = document.getElementById('artistContent')
+const events = document.querySelector('.events')
 
 
 const query = new URLSearchParams(window.location.search)
@@ -28,7 +29,7 @@ fetch(`https://musicbrainz.org/ws/2/artist/${artistID}?inc=url-rels+releases+wor
                         console.log(mbedata)
                         console.log(container)
                         // Event html 
-                        const eventhtml =  mbedata.map((artistEvent) => {
+                        const eventhtml = mbedata.map((artistEvent) => {
                             console.log(artistEvent.title)
                             return (`
                     <p class= 'eventtime' >${artistEvent.venue.name}</p>
@@ -41,7 +42,7 @@ fetch(`https://musicbrainz.org/ws/2/artist/${artistID}?inc=url-rels+releases+wor
                         // Artist html //
                         container.innerHTML = `<img src="${bitdata.image_url}" alt="..." class="img-thumbnail">
                         <h1 class='header1'><b>Artist Name:</b> ${mbdata.name} </h1>
-                        ${mbdata['begin-area'] ?`<h1 class="header1"><b>Artist Hometown:</b> ${mbdata['begin-area']['sort-name']}</h1>` :""}
+                        ${mbdata['begin-area'] ? `<h1 class="header1"><b>Artist Hometown:</b> ${mbdata['begin-area']['sort-name']}</h1>` : ""}
                         <h1 class='header1'><b>Artist Birth:</b> ${mbdata['life-span'].begin} </h1>
                         <div class="card-body">
                                 <div class="events"> 
@@ -53,6 +54,7 @@ fetch(`https://musicbrainz.org/ws/2/artist/${artistID}?inc=url-rels+releases+wor
                     </div>
                             </div>
                         `
+                            })
                     })
             })
     })
