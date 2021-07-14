@@ -15,8 +15,8 @@ artistsInfo.forEach((artist) => {
         .then((res) => {
             return res.json()
         }) 
-        .then((data) => {
-            // console.log(data)
+        .then((data) => {  
+            
             const artistPic = data['thumb_url']
             // console.log(artistPic)
             // if empty or error, it stops/returns
@@ -39,9 +39,9 @@ artistsInfo.forEach((artist) => {
                                     ${artist['begin-area'] ?`<h6 class="header6">${artist['begin-area']['sort-name']}</h6>` :""}
                                     </div>
                                     <div class='button'>
-                                        <button type="button" class="favorites-button btn btn-outline-danger">Favorites</button>
+                                        <button type="button" class="favorites-button btn btn-outline-danger" data-id = "${artist.id}" data-name = "${artist.name}" data-img = "${data.image_url}" >Add To Favorites</button>
                                         ${artist.id ? `
-                                        <a href='../artist/artist.html?artist=${artist.id}' class="moreinfo-button btn btn-outline-danger">More Info</a>
+                                        <a href='../artist/artist.html?artist=${artist.id}'  class="moreinfo-button btn btn-outline-danger">More Info</a>
                                         `: ''}
                                     </div>
                                 </div>
@@ -55,9 +55,25 @@ document.addEventListener("click", (e) => {
     if(e.target.classList.contains("favorites-button")){
         if(e.target.innerHTML == "Add To Favorites") {
             e.target.innerHTML="Added";
+            const id = e.target.dataset.id
+            const name = e.target.dataset.name
+            const image = e.target.dataset.img
+            console.log(id, name, image)
+            favArtistInfoArray = []
+            favArtistInfoArray.push({id, name, image})
+            const favArtistsInfoJSON = JSON.stringify(favArtistInfoArray)
+            localStorage.setItem("favArtistsInfo", favArtistsInfoJSON)
         }else {
             e.target.innerHTML = "Add To Favorites";
-        }
-
+        } 
+    
     }
 })   
+
+
+// document.addEventListener("click", (e) => {
+//     if(e.target.classList.contains("favorites-button")){
+//         const artistID = e.target.dataset.artistsInfo;
+//         console.log(localStorage)
+//     }
+// });
