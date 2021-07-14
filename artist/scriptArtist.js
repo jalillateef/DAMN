@@ -41,7 +41,6 @@ fetch(`https://musicbrainz.org/ws/2/artist/${artistID}?inc=url-rels+releases+wor
                             <a href='${artistEvent.url}'><button class= 'ticketbutton rounded-3'>Tickets Here</button></a>
                     </div>`)
                         }).join('')
-
                         fetch (`https://www.theaudiodb.com/api/v1/json/1/search.php?s=${urlEncodedArtist}`)
                             .then ((res) => {
                                 return res.json()
@@ -50,12 +49,19 @@ fetch(`https://musicbrainz.org/ws/2/artist/${artistID}?inc=url-rels+releases+wor
                                 const adbdata = adb.artists[0]
                                 // console.log(adbdata)
                                 // Artist html //
-                                container.innerHTML = `<img src="${bitdata.image_url}" alt="..." class="img-thumbnail">
-                                <h1 class='header1'><b>Artist Name:</b> ${mbdata.name} </h1>
-                                ${mbdata['begin-area'] ? `<h1 class="header1"><b>Artist Hometown:</b> ${mbdata['begin-area']['sort-name']}</h1>` : ""}
-                                <h1 class='header1'><b>Artist Birth:</b> ${mbdata['life-span'].begin} </h1>
-                                <div>
-                                    <p>${adbdata.strBiographyEN}</p>
+                                container.innerHTML = `
+                                <div class='row'>
+                                    <div class ='col-4'>
+                                    <img src="${bitdata.image_url}" alt="..." class="img-thumbnail">
+                                    <h1 class='header1'><b>Artist Name:</b> ${mbdata.name} </h1>
+                                    ${mbdata['begin-area'] ? `<h1 class="header1"><b>Artist Hometown:</b> ${mbdata['begin-area']['sort-name']}</h1>` : ""}
+                                    <h1 class='header1'><b>Artist Birth:</b> ${mbdata['life-span'].begin} </h1>
+                                    </div>
+                                    <div class="col-7 mt-auto mb-auto">
+                                        <p class = 'biography outline rounded'>${adbdata.strBiographyEN}</p>
+                                    </div>
+                                </div>
+                                <div class= 'artist-bio'>
                                 </div>
                                 <div class="card-body">
                                         <div class="events"> 
@@ -68,8 +74,6 @@ fetch(`https://musicbrainz.org/ws/2/artist/${artistID}?inc=url-rels+releases+wor
                                     </div>
                                 `
                             })
-
-
                             })
                     })
             })
