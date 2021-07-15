@@ -8,9 +8,9 @@ row.innerHTML = favArtistsInfo.map((artist) => {
     console.log(artist)
     return `<div class="col-sm-6">
     <div class="card" style="width: 18rem;">
-        <img src="${artist.image}" class="card-img-top" alt="...">
+    <a href="../artist/artist.html"> <img src="${artist.image}" class="card-img-top" alt="...">
         <div class="card-body">
-            <p class="card-text">${artist.name}</p>
+            <p class="card-text">${artist.name}</p> </a>
         </div>
     </div>
 </div>`
