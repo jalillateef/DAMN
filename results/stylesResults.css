@@ -13,9 +13,7 @@
     margin: 0px;
 }
 
-.all-artist{
-    max-width: 900;
-}
+
 
 .navbar {
     font-family: 'germania';
@@ -57,20 +55,22 @@
     transition: 0.20s linear;
 }
 
-.container-fluid {
+.all-artist{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* max-width: 900px; */
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .artist-container {
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 20px;
-    margin: 30px;
+    padding: 10px;
+    margin: 10px;
     transition: transform .4s ease;
-    width: 100%;
+    /* width: 20rem;  */
+    /* flex-wrap: wrap; */
 }
 
 .artist-container:hover {
@@ -84,7 +84,6 @@
 }
 
 .card {
-    width: 1000px;
     padding: 10px;
     border: 2px solid black;
     box-shadow: 12px 20px 10px rgb(0 0 0 / 0.2);
@@ -101,7 +100,9 @@
 }
 
 .artist-text {
+    display: flex;
     font-family: 'germania';
+    width: 100%;
 }
 
 .artist-info {

@@ -23,10 +23,11 @@ artistsInfo.forEach((artist) => {
                 return  
             } 
             const beginLife = artist['life-span'].begin
-            console.log(beginLife)
-            let birthday = new Date(beginLife)
+            // console.log(beginLife)
+            const birthday = new Date(beginLife)
+            console.log(birthday)
             const year = birthday.getFullYear()
-            const day = birthday.getDay()
+            const day = birthday.getUTCDay()
             const month = birthday.getMonth()
             console.log(month, day, year)
             container.innerHTML += `<div class='artist-container'>
@@ -47,9 +48,9 @@ artistsInfo.forEach((artist) => {
                                     </div>
                                     </div>
                                     <div class='button'>
-                                        <button type="button" class="favorites-button btn btn-outline-danger">Favorites</button>
+                                        <button type="button" class="favorites-button btn btn-outline-danger" data-id = "${artist.id}" data-name = "${artist.name}" data-img = "${data.image_url}" >Add To Favorites</button>
                                         ${artist.id ? `
-                                        <a href='../artist/artist.html?artist=${artist.id}' class="moreinfo-button btn btn-outline-danger">More Info</a>
+                                        <a href='../artist/artist.html?artist=${artist.id}'  class="moreinfo-button btn btn-outline-danger">More Info</a>
                                         `: ''}
                                     </div>
                                 </div>
@@ -58,13 +59,24 @@ artistsInfo.forEach((artist) => {
     // ! this is an inline IF statement, it'll check if (left of the question mark) exist, to the right of the question mark its a true and false, if the statement return true, it'll do the true part (between the semicolon and question mark), if false it'll do false part (after the semicolon)
         })
 })
+favArtistInfoArray = []
 document.addEventListener("click", (e) => {
     if(e.target.classList.contains("favorites-button")){
         if(e.target.innerHTML == "Add To Favorites") {
             e.target.innerHTML="Added";
+            const id = e.target.dataset.id
+            const name = e.target.dataset.name
+            const image = e.target.dataset.img
+            console.log(id, name, image)
+            // favArtistInfoArray = []
+            favArtistInfoArray.push({id, name, image})
+            const favArtistsInfoJSON = JSON.stringify(favArtistInfoArray)
+            localStorage.setItem("favArtistsInfo", favArtistsInfoJSON)
         }else {
             e.target.innerHTML = "Add To Favorites";
         }
     }
     }
 )   
+
+
