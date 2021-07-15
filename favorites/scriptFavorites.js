@@ -11,8 +11,8 @@ row.innerHTML = favArtistsInfo.map((artist) => {
 
     <a href="../artist/artist.html"> <img src="${artist.image}" class="card-img-top" alt="...">
         <div class="card-body">
-
-        </div>
+        <p class="card-text">${artist.name}</p>
+        </div> </a>
     </div>
 </div>`
 }) .join("")
