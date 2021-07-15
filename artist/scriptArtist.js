@@ -47,7 +47,7 @@ fetch(`https://musicbrainz.org/ws/2/artist/${artistID}?inc=url-rels+releases+wor
                             })
                             .then ((adb) => {
                                 const adbdata = adb.artists[0]
-                                console.log(adbdata)
+                                // console.log(adbdata)
                                 // Artist html //
                                 container.innerHTML = `
                                 <div class='row'>
