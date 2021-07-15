@@ -159,3 +159,16 @@
     border-radius: 25px;
     align-items: center;
 }
+
+.albumcontent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.albumtitle {
+    display: flex;
+    font-family: 'germania';
+    font-size: x-large;
+    justify-content: center;
+}
