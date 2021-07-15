@@ -55,12 +55,6 @@
     transition: 0.20s linear;
 }
 
-.container-fluid {
-    display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center;
-    align-items: center; */
-}
 .all-artist{
     display: flex;
     /* max-width: 900px; */
@@ -76,7 +70,6 @@
     margin: 10px;
     transition: transform .4s ease;
     /* width: 20rem;  */
-    /* width: 30%; */
     /* flex-wrap: wrap; */
 }
 
@@ -91,7 +84,6 @@
 }
 
 .card {
-    /* width: 40%; */
     padding: 10px;
     border: 2px solid black;
     box-shadow: 12px 20px 10px rgb(0 0 0 / 0.2);
@@ -108,7 +100,9 @@
 }
 
 .artist-text {
+    display: flex;
     font-family: 'germania';
+    width: 100%;
 }
 
 .artist-info {
