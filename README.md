@@ -8,7 +8,7 @@ Once you are on the home page (damnmusicapp.netlify.app), type in your favorite 
 
 #TECHNOLOGIES USED
 
-HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP 4
+HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP 5
 
 #PROJECT STATUS
 
@@ -23,5 +23,5 @@ ACKNOWLEDGEMENTS
 
 - This project was inspired by Ticketmaster and Bandsintown.
 
-- Many thanks to Dylan Guidry, Ronny Barahona, Tyler, Jalil Lateef.
+- Many thanks to Dylan Guidry, Ronny Barahona, Tyler Le, Jalil Lateef.
 
